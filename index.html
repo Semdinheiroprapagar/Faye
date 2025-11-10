@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loja de roupas fitness Larulp - Leggings, tops, calças e mais">
+    <title>Faye</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+    <!-- Header com Banner Promocional -->
+    <div class="promo-banner">
+        <p>BEM VINDO A FAYE <strong>COMPRE ACIMA DE 20 PEÇAS</strong> E GANHE DESCONTOS</p>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <div class="logo">
+                    <a href="products.html" aria-label="Faye Produtos">
+                        <img src="assets/images/logo.png" alt="Larulp">
+                    </a>
+                </div>
+
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="products.html">Produtos</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="icon-btn search-btn" aria-label="Buscar">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="icon-btn cart-btn" id="cartBtn" aria-label="Carrinho">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M9 9h12M9 15h12"></path>
+                        </svg>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button class="icon-btn account-btn" aria-label="Minha conta">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Menu Mobile -->
+    <aside class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span>Menu</span>
+            <button class="close-menu" id="closeMenu" aria-label="Fechar menu">&times;</button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="products.html">Produtos</a>
+            <a href="about.html">About</a>
+        </nav>
+    </aside>
+
+    <!-- Carrinho Sidebar -->
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Minha sacola</h2>
+            <button class="close-cart" id="closeCart" aria-label="Fechar carrinho">&times;</button>
+        </div>
+        <div class="cart-content">
+            <div class="empty-cart">
+                <p>Seu carrinho está vazio</p>
+            </div>
+            <div class="cart-items" id="cartItems"></div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <div class="cart-row">
+                    <span>Subtotal:</span>
+                    <span class="cart-subtotal">R$ 0,00</span>
+                </div>
+                <div class="cart-row">
+                    <span>Entrega:</span>
+                    <span>Calculando...</span>
+                </div>
+                <div class="cart-row total">
+                    <span>Total:</span>
+                    <span class="cart-total">R$ 0,00</span>
+                </div>
+            </div>
+            <button class="btn-primary btn-checkout">Finalizar compra</button>
+            <button class="btn-secondary btn-continue">Continuar comprando</button>
+        </div>
+    </aside>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-content">
+            <div class="search-header">
+                <h2>Buscar produtos</h2>
+                <button class="close-search" id="closeSearch" aria-label="Fechar busca">&times;</button>
+            </div>
+            <div class="search-input-container">
+                <input type="text" id="searchInput" placeholder="Digite o nome do produto..." autocomplete="off">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </div>
+            <div class="search-results" id="searchResults">
+                <p class="search-placeholder">Digite para buscar produtos...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Banner Carousel -->
+        <section class="hero-carousel">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide active">
+                        <div class="slide-content">
+                            <h1>Nova Coleção Verão</h1>
+                            <p>Conjuntos de Top e Shorts Novidades</p>
+                            <a href="products.html" class="btn-primary">Comprar agora</a>
+                        </div>
+                        <div class="slide-image">
+                            <img src="assets/images/carousel/slide-1.png" alt="Nova Coleção Verão">
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <div class="slide-content">
+                            <h1>Best Sellers</h1>
+                            <p>Os produtos mais vendidos da temporada</p>
+                            <a href="products.html" class="btn-primary">Ver coleção</a>
+                        </div>
+                        <div class="slide-image">
+                            <img src="assets/images/carousel/slide-2.png" alt="Best Sellers">
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <div class="slide-content">
+                            <h1>Descontos Imperdíveis</h1>
+                            <p>Aproveite os melhores descontos</p>
+                            <a href="products.html" class="btn-primary">Ver ofertas</a>
+                        </div>
+                        <div class="slide-image">
+                            <img src="assets/images/carousel/slide-3.png" alt="Promoções com até 50% OFF">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Controles do Carousel -->
+                <button class="carousel-btn carousel-prev" id="prevBtn" aria-label="Slide anterior">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="carousel-btn carousel-next" id="nextBtn" aria-label="Próximo slide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                
+                <!-- Indicadores -->
+                <div class="carousel-indicators">
+                    <button class="indicator active" data-slide="0" aria-label="Slide 1"></button>
+                    <button class="indicator" data-slide="1" aria-label="Slide 2"></button>
+                    <button class="indicator" data-slide="2" aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <h3>Frete Grátis</h3>
+                        <p>Para pedidos acima de R$ 299,90</p>
+                    </div>
+                    <div class="feature-card">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <polyline points="1 10 12 16 23 10"></polyline>
+                        </svg>
+                        <h3>Parcelamento</h3>
+                        <p>Dividimos em até 10x </p>
+                    </div>
+                    <div class="feature-card">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <h3>Troca Grátis</h3>
+                        <p>Primeira troca grátis e 30 dias para trocar</p>
+                    </div>
+                    <div class="feature-card">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <h3>Atendimento</h3>
+                        <p>Segunda a sexta das 06:00 às 14:00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conjuntos em Destaque -->
+        <section class="products-section" id="produtos">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Conjuntos em Destaque</h2>
+                    <p>Conjuntos completos para treinos intensos e looks casuais</p>
+                </div>
+                <div class="products-grid" id="conjuntosGrid"></div>
+                <div class="section-actions">
+                    <a href="products.html" class="btn-secondary">Ver todos os produtos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tops Favoritos -->
+        <section class="products-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Tops Favoritos</h2>
+                    <p>Sustentação e conforto para qualquer intensidade de treino</p>
+                </div>
+                <div class="products-grid" id="topsGrid"></div>
+                <div class="section-actions">
+                    <a href="products.html" class="btn-secondary">Ver mais opções</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shorts Essenciais -->
+        <section class="products-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Shorts Essenciais</h2>
+                    <p>Modelagens versáteis para corrida, academia e dia a dia</p>
+                </div>
+                <div class="products-grid" id="shortsGrid"></div>
+                <div class="section-actions">
+                    <a href="products.html" class="btn-secondary">Explorar catálogo completo</a>
+                </div>
+            </div>
+        </section>
+
+
+      
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="assets/images/logo.png" alt="Faye" class="footer-logo">
+                    <p>Moda fitness premium pensada para lojistas e revendedores que exigem tecnologia, estilo e entrega ágil.</p>
+                </div>
+                <div class="footer-cta">
+                    <span>Atendimento consultivo B2B</span>
+                    <a href="products.html" class="btn-primary">Falar com a Faye</a>
+                </div>
+            </div>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Catálogo</h4>
+                    <ul>
+                        <li><a href="products.html">Conjuntos</a></li>
+                        <li><a href="products.html">Tops</a></li>
+                        <li><a href="products.html">Shorts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="about.html">Quem somos</a></li>
+                        <li><a href="about.html">Programa de revenda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Atendimento</h4>
+                    <ul>
+                        <li><strong>Telefone:</strong> (16) 99221-0837</li>
+                        <li><strong>E-mail:</strong> Fayeprofit@gmail.com
+                        </li>
+                        <li><strong>Horário:</strong> Seg - Sex | 06h às 13h</li>
+                        <li><strong>Endereço:</strong> Rua Fortaleza, 990, Jardim Brasilândia - Franca/SP</li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="footer-bottom">
+        
+                <p>© 2025 Faye. CNPJ: 62.201.334/0001-80. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
