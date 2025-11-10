@@ -84,31 +84,31 @@ const products = {
             id: 1,
             slug: 'conjunto-premium',
             category: 'Conjuntos',
-            name: 'Conjunto Fitness Completo Premium',
-            price: 219.90,
-            badge: 'Best Seller',
-            description: 'Legging modeladora com top de alta sustentação e tecido respirável.',
-            benefits: ['Compressão graduada', 'Dry fit 4-way stretch']
+            name: 'Conjunto-1',
+            price: 25.00,
+            
+            description: 'Performance de alto impacto com tecido macio que abraça e esculpe a silhueta.',
+            benefits: ['Top com sustentação extrema', 'Dry fit com resfriamento rápido']
         }),
         createProduct({
             id: 2,
             slug: 'conjunto-training',
             category: 'Conjuntos',
-            name: 'Conjunto Esportivo Training Pro',
-            price: 199.90,
-            badge: 'Novo',
-            description: 'Conjunto desenvolvido para treinos intensos com acabamento antiodor.',
-            benefits: ['Resistente ao suor', 'Toque extra macio']
+            name: 'Conjunto-2',
+            price: 25.00,
+            
+            description: 'Tecnologia antiodor e respirabilidade máxima para treinos sem interrupção.',
+            benefits: ['Costuras flat que não irritam', 'Tecido antibactérias permanente', 'Elasticidade 360° sem transparência']
         }),
         createProduct({
             id: 3,
             slug: 'conjunto-deluxe',
             category: 'Conjuntos',
-            name: 'Conjunto Casual Sport Deluxe',
-            price: 249.90,
-            badge: 'Linha 360',
-            description: 'Visual urbano com performance esportiva para transitar do treino ao dia a dia.',
-            benefits: ['Proteção UV50+', 'Não marca e não transparência']
+            name: 'Conjunto-3',
+            price: 25.00,
+            
+            description: 'Visual premium que transita do estúdio à rua mantendo conforto absoluto.',
+            benefits: ['Proteção UV50+ contra raios solares', 'Modelagem que afina a cintura', 'Acabamento acetinado antidesgaste']
         })
     ],
     tops: [
@@ -116,30 +116,30 @@ const products = {
             id: 4,
             slug: 'top-alta-performance',
             category: 'Tops',
-            name: 'Top Esportivo Alta Performance',
-            price: 89.90,
-            badge: 'Best Seller',
-            description: 'Suporte firme com recortes anatômicos que valorizam o busto.',
-            benefits: ['Bojo removível', 'Alças reguláveis']
+            name: 'Top-1',
+            price: 14.00,
+            
+            description: 'Suporte inteligente com recortes anatômicos que valorizam o busto.',
+            benefits: ['Bojo removível com memória', 'Alças reguláveis acolchoadas', 'Forro respirável cool touch']
         }),
         createProduct({
             id: 5,
             slug: 'top-cross-training',
             category: 'Tops',
-            name: 'Top Cross Training Intenso',
-            price: 129.90,
-            badge: 'Novo',
-            description: 'Top resistente com costas nadador para liberdade total de movimento.',
-            benefits: ['Alta sustentação', 'Costas nadador respirável']
+            name: 'Top-2',
+            price: 14.00,
+            
+            description: 'Estrutura reforçada para treinos explosivos com total liberdade de movimento.',
+            benefits: ['Alta sustentação antichoque', 'Costas nadador ventilada', 'Compressão estratégica no busto']
         }),
         createProduct({
             id: 6,
             slug: 'top-modelador',
             category: 'Tops',
-            name: 'Top Fitness Modelador Confort',
-            price: 99.90,
-            description: 'Top modelador com toque acetinado e forro macio antibacteriano.',
-            benefits: ['Modelagem anatômica', 'Forro antibacteriano']
+            name: 'Top-3',
+            price: 14.00,
+            description: 'Top modelador de toque acetinado que abraça sem apertar e respira com você.',
+            benefits: ['Modelagem 3D que define curvas', 'Forro antibacteriano hipoalergênico', 'Barra firme que não enrola']
         })
     ],
     shorts: [
@@ -150,8 +150,8 @@ const products = {
             name: 'Short Fitness Performance Plus',
             price: 79.90,
             badge: 'Best Seller',
-            description: 'Cintura alta que abraça a silhueta com compressão confortável.',
-            benefits: ['Bolso lateral', 'Não enrola no movimento']
+            description: 'Compressão confortável com cintura alta que entrega segurança o dia todo.',
+            benefits: ['Bolso lateral para essentials', 'Costuras reforçadas antiatrito', 'Não enrola mesmo em treinos intensos']
         }),
         createProduct({
             id: 8,
@@ -159,8 +159,8 @@ const products = {
             category: 'Shorts',
             name: 'Short Saia Fitness Elegante',
             price: 99.90,
-            description: 'Short saia com short interno que garante segurança e liberdade.',
-            benefits: ['UV50+ permanente', 'Saia com recorte fluido']
+            description: 'Short externo fluido com interno firme, garantindo estilo e cobertura total.',
+            benefits: ['UV50+ de longa duração', 'Saia com recorte envelope', 'Short interno aderente e seguro']
         }),
         createProduct({
             id: 9,
@@ -168,9 +168,9 @@ const products = {
             category: 'Shorts',
             name: 'Short Ciclista Pro Training',
             price: 89.90,
-            badge: 'Novo',
-            description: 'Ciclista com compressão inteligente e estampa exclusiva Faye.',
-            benefits: ['Costuras reforçadas', 'Estampa digital ultrarresistente']
+            
+            description: 'Ciclista com compressão estratégica e textura que ativa a circulação.',
+            benefits: ['Painéis ventilados nas laterais', 'Estampa digital com alta durabilidade', 'Barra dupla que não sobe']
         })
     ]
 };
