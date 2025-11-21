@@ -147,9 +147,9 @@ const products = {
             id: 7,
             slug: 'short-performance',
             category: 'Shorts',
-            name: 'Short Fitness Performance Plus',
-            price: 79.90,
-            badge: 'Best Seller',
+            name: 'Short-01',
+            price: 16.00,
+            
             description: 'Compressão confortável com cintura alta que entrega segurança o dia todo.',
             benefits: ['Bolso lateral para essentials', 'Costuras reforçadas antiatrito', 'Não enrola mesmo em treinos intensos']
         }),
@@ -157,8 +157,8 @@ const products = {
             id: 8,
             slug: 'short-saia',
             category: 'Shorts',
-            name: 'Short Saia Fitness Elegante',
-            price: 99.90,
+            name: 'Short-02',
+            price: 16.00,
             description: 'Short externo fluido com interno firme, garantindo estilo e cobertura total.',
             benefits: ['UV50+ de longa duração', 'Saia com recorte envelope', 'Short interno aderente e seguro']
         }),
@@ -166,8 +166,8 @@ const products = {
             id: 9,
             slug: 'short-ciclista',
             category: 'Shorts',
-            name: 'Short Ciclista Pro Training',
-            price: 89.90,
+            name: 'Short-03',
+            price: 16.00,
             
             description: 'Ciclista com compressão estratégica e textura que ativa a circulação.',
             benefits: ['Painéis ventilados nas laterais', 'Estampa digital com alta durabilidade', 'Barra dupla que não sobe']
